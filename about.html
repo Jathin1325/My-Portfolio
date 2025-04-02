@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="index.html" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">My Portfolio</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Home</a>
+                    <a href="about.html" class="py-4 px-2 text-blue-500 border-b-4 border-blue-500 font-semibold">About</a>
+                    <a href="portfolio.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Portfolio</a>
+                    <a href="contact.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-blue-500 transition duration-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- About Section -->
+        <section class="mb-16">
+            <h1 class="text-4xl font-bold text-gray-900 mb-8">About Me</h1>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/3">
+                    <div class="relative group">
+                        <input type="file" id="profile-upload" accept="image/*" class="hidden">
+                        <label for="profile-upload" class="cursor-pointer">
+                            <img id="profile-image" src="https://via.placeholder.com/400x500.png?text=Click+to+Upload" 
+                                 alt="Jathin Reddy Profile" 
+                                 class="rounded-lg shadow-md w-full h-auto border-4 border-blue-500 group-hover:opacity-80 transition">
+                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                                <span class="bg-blue-500 text-white px-4 py-2 rounded-lg">Upload Photo</span>
+                            </div>
+                        </label>
+                    </div>
+                    <script>
+                        document.getElementById('profile-upload').addEventListener('change', function(e) {
+                            const file = e.target.files[0];
+                            if (file) {
+                                const reader = new FileReader();
+                                reader.onload = function(event) {
+                                    document.getElementById('profile-image').src = event.target.result;
+                                }
+                                reader.readAsDataURL(file);
+                            }
+                        });
+                    </script>
+                </div>
+                
+                <div class="md:w-2/3">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Hello, I'm Chintha Jathin Reddy</h2>
+                    <p class="text-gray-600 mb-6">
+                        I'm a Computer Science & Engineering student passionate about full-stack development and AI.
+                        A motivated, adaptable and responsible computing student with excellent communication skills
+                        seeking to enhance my professional and technical skills.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Interested in learning emerging technologies and improving my skills in web development,
+                        machine learning, and cloud computing. I enjoy tackling complex problems and creating
+                        efficient, user-friendly solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+                            <i class="fas fa-download mr-2"></i> Download CV
+                        </a>
+                        <a href="contact.html" class="border border-blue-500 text-blue-500 px-4 py-2 rounded hover:bg-blue-50 transition">
+                            <i class="fas fa-envelope mr-2"></i> Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">My Skills</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Programming Languages -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-code text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Programming Languages</h3>
+                    <p class="text-gray-600">
+                        C, Java, Python, JavaScript, Node.js
+                    </p>
+                </div>
+                
+                <!-- Web Development -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-globe text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-600">
+                        HTML, CSS, React, AngularJS, Node.js, Express
+                    </p>
+                </div>
+                
+                <!-- Databases -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-database text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Databases</h3>
+                    <p class="text-gray-600">
+                        MongoDB, SQL, MySQL
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section>
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Experience</h2>
+            
+            <div class="space-y-8">
+                <!-- Education -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-semibold">Bachelor's of Engineering - Information Science & Engineering</h3>
+                        <span class="text-blue-500 font-medium">2021 - Present</span>
+                    </div>
+                    <h4 class="text-gray-700 font-medium mb-2">Mangalore Institute of Technology & Engineering</h4>
+                    <p class="text-gray-600">
+                        CGPA: 8.2
+                    </p>
+                </div>
+                
+                <!-- Internship -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-semibold">Frontend Developer Intern</h3>
+                        <span class="text-blue-500 font-medium">Oct 2023 - Nov 2023</span>
+                    </div>
+                    <h4 class="text-gray-700 font-medium mb-2">AB info Solutions</h4>
+                    <p class="text-gray-600">
+                        Developed Netflix Clone Application using HTML, Java, and CSS.
+                        Gained experience in Front-end Development and cloud servers.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Hobbies & Interests</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-camera text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Photography</h3>
+                    <p class="text-gray-600">
+                        Capturing moments and exploring creative composition
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-dumbbell text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Fitness</h3>
+                    <p class="text-gray-600">
+                        Regular workouts and maintaining healthy lifestyle
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-table-tennis text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Sports</h3>
+                    <p class="text-gray-600">
+                        Active participation in various sports activities
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Certifications</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">Advanced React and Redux</h3>
+                    <p class="text-gray-600">Coursera (2023)</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">Full Stack Web Development</h3>
+                    <p class="text-gray-600">Udemy (2022)</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold">Google Cloud Platform Fundamentals</h3>
+                    <p class="text-gray-600">Coursera (2022)</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2024 Jathin Reddy's Portfolio. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-github fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
