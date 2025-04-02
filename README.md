@@ -67,7 +67,7 @@ GitHub: Your GitHub Profile
 
 LinkedIn: Your LinkedIn Profile
 
-Email: your.email@example.com
+Email: jreddy8865@gmail.com
 
 💡 How to Use This Repository
 
