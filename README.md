@@ -72,7 +72,7 @@ Email: your.email@example.com
 💡 How to Use This Repository
 
 Clone the repository:
-git clone https://github.com/yourusername/your-portfolio.git
+git clone https://github.com/Jathin1325/my-portfolio.git
 
 Navigate to the project directory:
 
